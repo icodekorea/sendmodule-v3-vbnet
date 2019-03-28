@@ -1,0 +1,38 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:iCodeSMS"
+        mc:Ignorable="d"
+        Title="iCodeSMS v3.0 b1" Height="500" Width="450" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="문자전송" Margin="10,260,10,0" VerticalAlignment="Top" Click="Button_Click" Height="39"/>
+        <TextBox x:Name="logBox" Margin="10,304,10,10" TextWrapping="Wrap" Text="## 발송 내역이 이곳에 보여집니다. ##&#xD;&#xA;"/>
+        <TextBox x:Name="txtSendMessage" Height="99" Margin="73,125,10,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" VerticalScrollBarVisibility="Auto" AcceptsReturn="True"/>
+        <Label Content="포트번호" HorizontalAlignment="Right" Margin="0,10,160,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" Height="26" Width="58"/>
+        <TextBox x:Name="txtServerIP" Height="23" Margin="73,13,224,0" TextWrapping="Wrap" Text="211.172.232.124" VerticalAlignment="Top" MaxLength="15"/>
+        <Label Content="토큰키" HorizontalAlignment="Right" Margin="0,38,374,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" Height="26" Width="58"/>
+        <TextBox x:Name="txtTokenkey" Height="23" Margin="73,41,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="서버IP" HorizontalAlignment="Right" Margin="0,10,374,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" RenderTransformOrigin="-0.207,0.462" Height="26" Width="58"/>
+        <TextBox Height="23" Margin="4,105,-4,0" TextWrapping="Wrap" Text="127.0.0.1" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="txtServerPort" Height="23" Margin="287,13,10,0" TextWrapping="Wrap" Text="9201" VerticalAlignment="Top" MaxLength="4"/>
+        <Label Content="수신번호" HorizontalAlignment="Right" Margin="0,66,160,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" Height="26" Width="58"/>
+        <TextBox x:Name="txtCallback" Height="23" Margin="73,69,224,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="발신번호" HorizontalAlignment="Right" Margin="0,66,374,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" RenderTransformOrigin="-0.207,0.462" Height="26" Width="58"/>
+        <TextBox x:Name="txtPhoneNumber" Height="23" Margin="287,69,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="제목" HorizontalAlignment="Right" Margin="0,94,374,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" Height="26" Width="58"/>
+        <TextBox x:Name="txtTitle" Height="23" Margin="73,97,10,0" TextWrapping="Wrap" VerticalAlignment="Top" MaxLength="30"/>
+        <Label Content="발송내용" HorizontalAlignment="Right" Margin="0,125,374,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" RenderTransformOrigin="-0.207,0.462" Height="26" Width="58"/>
+        <Label x:Name="lblSendLength" Content="0b" HorizontalAlignment="Right" Margin="0,198,374,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" RenderTransformOrigin="-0.207,0.462" Height="26" Width="58"/>
+        <Label x:Name="lblSendType" Content="SMS" HorizontalAlignment="Right" Margin="0,172,374,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" RenderTransformOrigin="-0.207,0.462" Height="26" Width="58"/>
+        <TextBox x:Name="txtDateTime" Height="23" Margin="73,232,272,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center" MaxLength="14"/>
+        <Label Content="예약일자" HorizontalAlignment="Right" Margin="0,229,374,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" RenderTransformOrigin="-0.207,0.462" Height="26" Width="58"/>
+        <Label Content="없으면 즉시발송. 'yyyymmddhhnn' 형태" HorizontalAlignment="Right" Margin="0,229,10,0" VerticalAlignment="Top" RenderTransformOrigin="-0.207,0.462" Height="26" Width="257"/>
+
+    </Grid>
+</Window>
